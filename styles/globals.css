@@ -8,21 +8,21 @@
 /* Root Variables */
 
 :root {
-    --flamingo: #FF7350;
-    --amber: #FEC358;
-    --crayola: #F9F4E8;
-    --seashell: #FFEDEA;
+    --flamingo: #ff7350;
+    --amber: #fec358;
+    --crayola: #f9f4e8;
+    --seashell: #ffedea;
     --info: #1e90ff;
     --success: #00ba88;
     --error: #eb5757;
     --warning: #f4b740;
-    --prussion: #04014D;
-    --gray: #A0A3BD;
-    --steel: #D6D8E7;
-    --smoke: #F7F7FC;
-    --shell: #EFF0F6;
+    --prussion: #04014d;
+    --gray: #a0a3bd;
+    --steel: #d6d8e7;
+    --smoke: #f7f7fc;
+    --shell: #eff0f6;
     --dove: #ffffff;
-    --btn-p-hover: #E7694A;
+    --btn-p-hover: #e7694a;
     --peaky-shadow-nav: 0px 5px 11px 0px rgba(50, 50, 50, 0.08);
     --peaky-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.08);
     --peaky-shadow-none: 0 3px 6px 0 rgba(0, 0, 0, 0);
@@ -97,8 +97,6 @@ button {
     background: #69696950;
 }
 
-
-
 /* Padding Classes */
 
 .lr-pad-d {
@@ -115,7 +113,6 @@ button {
     padding-top: 2rem;
     padding-bottom: 2rem;
 }
-
 
 /* Heading Tag Classes */
 
@@ -208,7 +205,6 @@ h5 {
     font-weight: 600;
 }
 
-
 /* Button Classes */
 
 .btn-x-lg {
@@ -296,7 +292,6 @@ h5 {
     background: #eff0f6e6;
 }
 
-
 /* Custom Buttons */
 
 .default-flamingo-btn,
@@ -357,7 +352,6 @@ h5 {
 .btn-sm {
     height: 40px !important;
 }
-
 
 /* Flex Box Classes */
 
@@ -448,7 +442,6 @@ h5 {
 .f-f-c-r {
     flex-flow: column-reverse;
 }
-
 
 /* Grid Classes */
 
@@ -563,7 +556,6 @@ h5 {
     place-content: center;
 }
 
-
 /* Background Image Classes */
 
 .bg-image {
@@ -586,7 +578,6 @@ h5 {
     display: none;
 }
 
-
 /* Custom Height */
 
 .c-height {
@@ -596,7 +587,6 @@ h5 {
 .c-height-2 {
     height: calc(100vh - 160px);
 }
-
 
 /* New Hamburger Menu */
 
@@ -699,7 +689,6 @@ h5 {
     display: none !important;
 }
 
-
 /* Global Notification Color */
 
 .success-notification-top {
@@ -717,7 +706,6 @@ h5 {
 .timer-notification-top {
     background: var(--prussion) !important;
 }
-
 
 /* Global Top Notification */
 
@@ -748,14 +736,12 @@ h5 {
     color: var(--dove) !important;
 }
 
-
 /* Global ANTD Error */
 
 .has-error .ant-form-explain,
 .has-error .ant-form-split {
     font-weight: 200;
 }
-
 
 /* Global Uppercase */
 
@@ -767,13 +753,11 @@ h5 {
     text-transform: capitalize;
 }
 
-
 /* Global First Letter Capitalize */
 
 .first-cap::first-letter {
     text-transform: capitalize;
 }
-
 
 /* Global Form Error */
 
@@ -781,7 +765,6 @@ h5 {
     font-family: "Open Sans", sans-serif;
     font-weight: 400 !important;
 }
-
 
 /* Global Flash Animation */
 
@@ -824,7 +807,6 @@ h5 {
     }
 }
 
-
 /* Custom Width */
 
 .w-10 {
@@ -866,7 +848,6 @@ h5 {
 .w-100 {
     width: 100%;
 }
-
 
 /* Custom Skeletons */
 
@@ -1052,7 +1033,14 @@ h5 {
 .skeleton-circle-32,
 .skeleton-circle-64,
 .skeleton-dropdown {
-    background: -webkit-gradient(linear, left top, right top, color-stop(25%, #f2f2f2), color-stop(37%, #e6e6e6), color-stop(63%, #f2f2f2));
+    background: -webkit-gradient(
+        linear,
+        left top,
+        right top,
+        color-stop(25%, #f2f2f2),
+        color-stop(37%, #e6e6e6),
+        color-stop(63%, #f2f2f2)
+    );
     background: linear-gradient(90deg, #f2f2f2 25%, #e6e6e6 37%, #f2f2f2 63%);
     background-size: 400% 100%;
     -webkit-animation: v-skeleton-loading 1.4s ease infinite;
@@ -1068,7 +1056,6 @@ h5 {
         background-position: 0 50%;
     }
 }
-
 
 /* Base Transition */
 
@@ -1123,7 +1110,6 @@ h5 {
     font-weight: 700 !important;
     font-size: 24px !important;
 }
-
 
 /* Mobile Optimization */
 
@@ -1252,7 +1238,6 @@ h5 {
     }
 }
 
-
 /* For Tablets Portrait or Landscape */
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
@@ -1274,7 +1259,6 @@ h5 {
     }
 }
 
-
 /* For Mobile Landscape */
 
 @media only screen and (max-device-width: 760px) and (orientation: landscape) {
@@ -1282,7 +1266,6 @@ h5 {
         display: none !important;
     }
 }
-
 
 /* For Mobile Landscape */
 
