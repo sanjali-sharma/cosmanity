@@ -97,6 +97,10 @@ button {
     background: #69696950;
 }
 
+.font-suez {
+    font-family: "Suez One" !important;
+}
+
 /* Padding Classes */
 
 .lr-pad-d {
@@ -281,11 +285,11 @@ h5 {
 }
 
 .btn-p:hover {
-    background: var(--btn-hover);
+    background: var(--btn-p-hover);
 }
 
 .ant-btn.btn-p:hover {
-    background: var(--btn-hover) !important;
+    background: var(--btn-p-hover) !important;
 }
 
 .btn-l:hover {

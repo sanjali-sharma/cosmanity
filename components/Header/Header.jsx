@@ -4,13 +4,13 @@ const Header = () => {
     return (
         <>
             <nav className="nav-bar lr-pad-d lr-pad-m f-d f-h-sb">
-                <div style={{ position: "relative" }}>
+                <div className="nav-logo-container" style={{ position: "relative" }}>
                     <Image src={"/cosmanity_logo.svg"} alt="cosmanity" layout={"fill"} />
                 </div>
                 <div className="nav-links-container f-d f-h-sb f-v-c">
-                    <div className="nav-link body-small">Testimonials</div>
-                    <div className="nav-link body-small">About</div>
-                    <div className="nav-link body-small">Contact</div>
+                    <div className="nav-link body-regular">Testimonials</div>
+                    <div className="nav-link body-regular">About</div>
+                    <div className="nav-link body-regular">Contact</div>
                     <div className="donate-btn f-d f-h-c f-v-c c-pointer">Donate Now</div>
                 </div>
             </nav>
@@ -34,7 +34,8 @@ const Header = () => {
                         width: auto;
                     }
 
-                    .nav-bar.active {
+                    .nav-logo-container {
+                        width: 200px;
                     }
 
                     .nav-links-container .nav-link {
