@@ -55,11 +55,15 @@ const Testimonials = () => {
                             </div>
                         </Slider>
                         <div className="carousel-arrows f-d c-pointer">
-                            <div className="arrow-box" onClick={() => handleCarouselNav("prev")}>
-                                <div className="arrow-icon"></div>
+                            <div className="arrow-box f-d f-h-c f-v-c" onClick={() => handleCarouselNav("prev")}>
+                                <div className="arrow-icon">
+                                    <Image src={"/icons/arrow-right.svg"} layout={"fill"} objectFit={"contain"} />
+                                </div>
                             </div>
-                            <div className="arrow-box" onClick={() => handleCarouselNav("next")}>
-                                <div className="arrow-icon"></div>
+                            <div className="arrow-box f-d f-h-c f-v-c" onClick={() => handleCarouselNav("next")}>
+                                <div className="arrow-icon arrow-next">
+                                    <Image src={"/icons/arrow-right.svg"} layout={"fill"} objectFit={"contain"} />
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -98,6 +102,16 @@ const Testimonials = () => {
                         width: 80px;
                         height: 80px;
                         background-color: var(--prussion);
+                    }
+
+                    .video-carousel-container .carousel-arrows .arrow-box .arrow-icon {
+                        position: relative;
+                        width: 24px;
+                        height: 24px;
+                    }
+
+                    .video-carousel-container .carousel-arrows .arrow-box .arrow-next {
+                        transform: rotate(180deg);
                     }
 
                     .carousel-item {
