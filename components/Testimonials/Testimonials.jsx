@@ -1,6 +1,38 @@
+import { useRef } from "react";
+import Slider from "react-slick";
+import Image from "next/image";
+
 import testimonialData from "./testimonialData";
 
+const settings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    adaptiveHeight: true,
+};
+
 const Testimonials = () => {
+    const carouselRef = useRef(null);
+
+    const handleCarouselNav = (type = "prev") => {
+        if (carouselRef) {
+            switch (type) {
+                case "prev":
+                    carouselRef.current.slickPrev();
+                    break;
+                case "next":
+                    carouselRef.current.slickNext();
+                    break;
+                default:
+                    carouselRef.current.slickPrev();
+                    break;
+            }
+        }
+    };
+
     return (
         <>
             <section className="testimonials lr-pad-d lr-pad-m tb-pad-d tb-pad-m f-d f-h-sb">
@@ -9,7 +41,29 @@ const Testimonials = () => {
                     <div className="desc body-large">{testimonialData.content.desc_one}</div>
                     <div className="desc body-large">{testimonialData.content.desc_two}</div>
                 </div>
-                <div className="testimonials-right"></div>
+                <div className="testimonials-right f-d f-h-e">
+                    <div className="video-carousel-container">
+                        <Slider {...settings} className="video-carousel" ref={carouselRef}>
+                            <div className="carousel-item">
+                                <h3>1</h3>
+                            </div>
+                            <div className="carousel-item">
+                                <h3>2</h3>
+                            </div>
+                            <div className="carousel-item">
+                                <h3>3</h3>
+                            </div>
+                        </Slider>
+                        <div className="carousel-arrows f-d c-pointer">
+                            <div className="arrow-box" onClick={() => handleCarouselNav("prev")}>
+                                <div className="arrow-icon"></div>
+                            </div>
+                            <div className="arrow-box" onClick={() => handleCarouselNav("next")}>
+                                <div className="arrow-icon"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </section>
             <style jsx>
                 {`
@@ -23,6 +77,32 @@ const Testimonials = () => {
 
                     .testimonials .testimonials-right {
                         width: 60%;
+                    }
+
+                    .video-carousel {
+                        height: 500px;
+                    }
+
+                    .video-carousel-container {
+                        width: 80%;
+                        position: relative;
+                    }
+
+                    .video-carousel-container .carousel-arrows {
+                        position: absolute;
+                        bottom: 0px;
+                        right: 0px;
+                    }
+
+                    .video-carousel-container .carousel-arrows .arrow-box {
+                        width: 80px;
+                        height: 80px;
+                        background-color: var(--prussion);
+                    }
+
+                    .carousel-item {
+                        background-color: wheat;
+                        height: 500px;
                     }
                 `}
             </style>
