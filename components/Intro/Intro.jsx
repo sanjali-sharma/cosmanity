@@ -1,4 +1,5 @@
 import { stepsData } from "./introData";
+import Image from "next/image";
 
 const Step = ({ step_no = 0 }) => {
     let data = stepsData[step_no];
@@ -35,6 +36,49 @@ const Step = ({ step_no = 0 }) => {
     );
 };
 
+const TypeCard = ({ bgColor = "#ffff", title = "", image = "/images/hero-organization.png" }) => {
+    return (
+        <>
+            <div className="type-card c-pointer">
+                <div className="info text-c-d body-medium">I’m a</div>
+                <div className="title font-suez text-c-d">{title}</div>
+                <div className="type-image f-d f-h-c">
+                    <Image src={image} layout={"fill"} objectFit={"contain"} />
+                </div>
+            </div>
+            <style jsx>
+                {`
+                    .type-card {
+                        padding: 40px;
+                        background-color: ${bgColor};
+                    }
+
+                    .type-card .info {
+                        letter-spacing: 0.02em;
+                        font-weight: 700;
+                        opacity: 0.4;
+                    }
+
+                    .type-card .title {
+                        margin-top: 8px;
+                        font-size: 36px;
+                        letter-spacing: 0.02em;
+                        color: var(--prussion);
+                        margin-bottom: 48px;
+                    }
+
+                    .type-card .type-image {
+                        position: relative;
+                        width: 80%;
+                        height: 200px;
+                        margin: 0 auto;
+                    }
+                `}
+            </style>
+        </>
+    );
+};
+
 const Intro = () => {
     return (
         <>
@@ -50,6 +94,11 @@ const Intro = () => {
                         <Step step_no={1} />
                         <Step step_no={2} />
                     </div>
+                </div>
+                <div className="org-types g-d g-col-3 g-gap-32">
+                    <TypeCard bgColor={"#ECDFF6"} title={"Organization"} image={"/images/hero-organization.png"} />
+                    <TypeCard bgColor={"#FFE9E3"} title={"Job Seeker"} image={"/images/in-a-reace.png"} />
+                    <TypeCard bgColor={"#C8EBFF;"} title={"Volunteer"} image={"/images/super-helper.png"} />
                 </div>
             </section>
             <style jsx>
@@ -67,6 +116,11 @@ const Intro = () => {
                         margin-top: 24px;
                         margin-bottom: 64px;
                         color: var(--dove) !important;
+                        letter-spacing: 0.02em;
+                    }
+
+                    .org-types {
+                        margin-top: 40px;
                     }
                 `}
             </style>

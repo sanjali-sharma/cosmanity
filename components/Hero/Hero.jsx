@@ -16,7 +16,12 @@ const Hero = () => {
                 </div>
                 <div className="hero-right f-d f-h-e">
                     <div className="hero-image">
-                        <Image src={"/images/relax-work.png"} alt={"Comanity-Hero-Image"} layout={"fill"} />
+                        <Image
+                            src={"/images/relax-work.png"}
+                            alt={"Comanity-Hero-Image"}
+                            layout={"fill"}
+                            objectFit={"contain"}
+                        />
                     </div>
                 </div>
             </section>
