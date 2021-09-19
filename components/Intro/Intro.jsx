@@ -88,7 +88,6 @@ const TypeCard = ({ bgColor = "#ffff", title = "", image = "/images/hero-organiz
                     }
 
                     .type-card .info {
-                        letter-spacing: 0.02em;
                         font-weight: 700;
                         opacity: 0.4;
                     }
@@ -96,7 +95,6 @@ const TypeCard = ({ bgColor = "#ffff", title = "", image = "/images/hero-organiz
                     .type-card .title {
                         margin-top: 8px;
                         font-size: 36px;
-                        letter-spacing: 0.02em;
                         color: var(--prussion);
                         margin-bottom: 48px;
                     }
@@ -150,7 +148,6 @@ const Intro = () => {
                         margin-top: 24px;
                         margin-bottom: 64px;
                         color: var(--dove) !important;
-                        letter-spacing: 0.02em;
                     }
 
                     .org-types {

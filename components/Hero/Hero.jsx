@@ -5,7 +5,7 @@ const Hero = () => {
         <>
             <section className="hero-container lr-pad-d lr-pad-m tb-pad-d tb-pad-m f-d f-h-sb">
                 <div className="hero-left">
-                    <h1 className="h1-heading font-suez">
+                    <h1 className="h1-heading font-suez title">
                         Let's get you back <br /> on your feet.
                     </h1>
                     <div className="body-large hero-desc">
