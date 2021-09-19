@@ -55,6 +55,7 @@ const Header = () => {
                     @media only screen and (max-device-width: 760px) {
                         .nav-bar {
                             min-height: 80px;
+                            top: -2px;
                         }
                         .nav-logo-container {
                             width: 124px;

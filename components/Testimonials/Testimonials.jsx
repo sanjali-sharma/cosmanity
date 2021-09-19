@@ -159,6 +159,22 @@ const Testimonials = () => {
                     .video-carousel-container .carousel-arrows .arrow-box .arrow-next {
                         transform: rotate(180deg);
                     }
+
+                    @media only screen and (max-device-width: 760px) {
+                        .testimonials {
+                            flex-direction: column;
+                        }
+
+                        .testimonials .testimonials-right,
+                        .testimonials .testimonials-left {
+                            width: 100%;
+                        }
+
+                        .video-carousel-container {
+                            margin-top: 40px;
+                            width: 100%;
+                        }
+                    }
                 `}
             </style>
         </>
