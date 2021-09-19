@@ -1,5 +1,6 @@
 import { stepsData } from "./introData";
 import Image from "next/image";
+import { useState } from "react";
 
 const Step = ({ step_no = 0 }) => {
     let data = stepsData[step_no];
@@ -37,20 +38,53 @@ const Step = ({ step_no = 0 }) => {
 };
 
 const TypeCard = ({ bgColor = "#ffff", title = "", image = "/images/hero-organization.png" }) => {
+    const [hoverActive, sethoverActive] = useState(false);
+    let diplay = "none";
+    if (hoverActive) diplay = "flex";
+
     return (
         <>
-            <div className="type-card c-pointer">
+            <div
+                className="type-card c-pointer"
+                onMouseOver={() => {
+                    sethoverActive(true);
+                }}
+                onMouseOut={() => {
+                    sethoverActive(false);
+                }}
+            >
                 <div className="info text-c-d body-medium">I’m a</div>
                 <div className="title font-suez text-c-d">{title}</div>
                 <div className="type-image f-d f-h-c">
                     <Image src={image} layout={"fill"} objectFit={"contain"} />
                 </div>
+                <div className="open-url f-d f-h-c f-v-c" style={{ display: diplay }}>
+                    <div className="arrow-right-icon">
+                        <Image src={"/icons/arrow-right-up.svg"} layout={"fill"} objectFit={"contain"} />
+                    </div>
+                </div>
             </div>
             <style jsx>
                 {`
                     .type-card {
-                        padding: 40px;
+                        padding: 40px 0px;
                         background-color: ${bgColor};
+                        position: relative;
+                    }
+
+                    .open-url {
+                        position: absolute;
+                        bottom: 0px;
+                        right: 0px;
+                        width: 80px;
+                        height: 80px;
+                        background-color: var(--prussion);
+                    }
+
+                    .open-url .arrow-right-icon {
+                        width: 24px;
+                        height: 24px;
+                        position: relative;
                     }
 
                     .type-card .info {
