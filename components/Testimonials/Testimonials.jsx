@@ -20,16 +20,43 @@ const VideoItem = ({ image }) => {
                 <div className="carousel-image">
                     <Image src={image} layout={"fill"} objectFit={"cover"} />
                 </div>
+                <div className="play-btn-container f-d f-h-c ">
+                    <div className="play-btn c-pointer  f-d f-h-c f-v-c">
+                        <div className="play-icon">
+                            <Image src={"/icons/play.svg"} layout={"fill"} objectFit={"contain"} />
+                        </div>
+                    </div>
+                </div>
             </div>
             <style jsx>
                 {`
                     .carousel-item {
                         height: 500px;
+                        position: relative;
                     }
 
                     .carousel-item .carousel-image {
                         position: relative;
                         height: 100%;
+                    }
+
+                    .play-btn-container {
+                        position: absolute;
+                        top: 42%;
+                        left: 0;
+                        right: 0;
+                    }
+
+                    .play-btn {
+                        height: 80px;
+                        width: 80px;
+                        background-color: var(--flamingo);
+                    }
+
+                    .play-icon {
+                        position: relative;
+                        width: 36px;
+                        height: 36px;
                     }
                 `}
             </style>
