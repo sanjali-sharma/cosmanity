@@ -7,7 +7,7 @@ const Step = ({ step_no = 0 }) => {
 
     return (
         <>
-            <div className="step-container f-d f-h-c">
+            <div className="step-container f-d f-h-c" data-aos={"fade-left"} data-aos-duration="1000">
                 <div className="step-box font-suez f-d f-h-c f-v-c">{data.stepNo}</div>
                 <div className="step-details f-d f-vt">
                     <h2 className="font-suez step-title">{data.title}</h2>
@@ -61,6 +61,8 @@ const TypeCard = ({ bgColor = "#ffff", title = "", image = "/images/hero-organiz
                 onMouseOut={() => {
                     sethoverActive(false);
                 }}
+                data-aos={"zoom-in-up"}
+                data-aos-duration="1000"
             >
                 <div className="info text-c-d body-medium">I’m a</div>
                 <div className="title font-suez text-c-d">{title}</div>
