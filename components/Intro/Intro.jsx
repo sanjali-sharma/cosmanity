@@ -31,6 +31,15 @@ const Step = ({ step_no = 0 }) => {
                         color: var(--dove) !important;
                         opacity: 0.5;
                     }
+
+                    @media only screen and (max-device-width: 760px) {
+                        .step-container {
+                            margin-top: 24px;
+                            width: 80%;
+                            margin-left: auto;
+                            margin-right: auto;
+                        }
+                    }
                 `}
             </style>
         </>
@@ -117,7 +126,7 @@ const Intro = () => {
             <section className="hero-intro lr-pad-d lr-pad-m tb-pad-d tb-pad-m">
                 <div className="how-it-works">
                     <h2 className="font-suez title text-c-d">How it works ?</h2>
-                    <div className="body-large desc text-c-d">
+                    <div className="body-large desc text-c-d ">
                         When you lost your job, it can be hard to know how to get back into work. <br /> Cosmanity helps
                         you find a new job and we’ll support you every step of the way.
                     </div>
@@ -137,7 +146,7 @@ const Intro = () => {
                 {`
                     .hero-intro .how-it-works {
                         background-color: var(--prussion);
-                        padding: 64px;
+                        padding: 64px 0px;
                     }
 
                     .hero-intro .how-it-works .title {
@@ -148,10 +157,24 @@ const Intro = () => {
                         margin-top: 24px;
                         margin-bottom: 64px;
                         color: var(--dove) !important;
+                        width: 80%;
+                        margin-left: auto;
+                        margin-right: auto;
                     }
 
                     .org-types {
                         margin-top: 40px;
+                    }
+                    @media only screen and (max-device-width: 760px) {
+                        .steps,
+                        .org-types {
+                            display: block;
+                        }
+
+                        .hero-intro .how-it-works .desc {
+                            font-size: 18px;
+                            line-height: 25px;
+                        }
                     }
                 `}
             </style>

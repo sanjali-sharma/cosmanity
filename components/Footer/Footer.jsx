@@ -8,7 +8,7 @@ const Footer = () => {
     return (
         <>
             <footer className="footer lr-pad-d lr-pad-m">
-                <div className="g-d g-col-3">
+                <div className="g-d g-col-3 footer-container">
                     <div className="company-info">
                         <div className="footer-logo-container" style={{ position: "relative" }}>
                             <Image src={"/cosmanity_logo.svg"} alt="cosmanity" layout={"fill"} />
@@ -56,7 +56,12 @@ const Footer = () => {
 
                 <div className="divider"></div>
                 <div className="footer-end f-d f-h-sb f-v-c">
-                    <div className="copy-right body-regular">&copy; 2021 COSMANITY NGO. All Rights Reserved.</div>
+                    <div className="copy-right body-regular hide-m">
+                        &copy; 2021 COSMANITY NGO. All Rights Reserved.
+                    </div>
+                    <div className="copy-right body-regular hide-d ">
+                        &copy; 2021 COSMANITY NGO. <br /> All Rights Reserved.
+                    </div>
                     <div className="privacy-terms f-d">
                         <div className="footer-link c-pointer body-regular">Privacy Policy</div>
                         <div className="footer-link c-pointer body-regular">Terms of use</div>
@@ -127,6 +132,42 @@ const Footer = () => {
 
                     div.footer-link:not(:last-child) {
                         margin-right: 40px;
+                    }
+
+                    @media only screen and (max-device-width: 760px) {
+                        .hide-desk {
+                            display: block;
+                        }
+
+                        .footer-container {
+                            display: block;
+                        }
+
+                        .footer .company-info,
+                        .footer .contact-us {
+                            margin-bottom: 40px;
+                        }
+
+                        .footer .contact-us .info {
+                            margin-bottom: 24px;
+                        }
+
+                        .footer .contact-us .info .detail {
+                            margin-top: 8px;
+                        }
+
+                        .footer-end {
+                            display: block;
+                        }
+
+                        .footer-end .privacy-terms {
+                            display: block;
+                            margin-top: 16px;
+                        }
+
+                        .footer-end .privacy-terms .footer-link {
+                            margin-top: 8px;
+                        }
                     }
                 `}
             </style>

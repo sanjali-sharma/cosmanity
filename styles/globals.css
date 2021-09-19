@@ -1127,6 +1127,10 @@ h5 {
         margin-top: 64px;
     }
 
+    .hide-d {
+        display: block;
+    }
+
     .hamburger {
         display: inline-block;
     }

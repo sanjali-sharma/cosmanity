@@ -7,7 +7,7 @@ const Header = () => {
                 <div className="nav-logo-container" style={{ position: "relative" }}>
                     <Image src={"/cosmanity_logo.svg"} alt="cosmanity" layout={"fill"} />
                 </div>
-                <div className="nav-links-container f-d f-h-sb f-v-c">
+                <div className="nav-links-container f-d f-h-sb f-v-c hide-m">
                     <div className="nav-link body-regular">Testimonials</div>
                     <div className="nav-link body-regular">About</div>
                     <div className="nav-link body-regular">Contact</div>
@@ -50,6 +50,15 @@ const Header = () => {
                         font-family: "Suez One";
                         font-weight: 400;
                         font-size: 16px;
+                    }
+
+                    @media only screen and (max-device-width: 760px) {
+                        .nav-bar {
+                            min-height: 80px;
+                        }
+                        .nav-logo-container {
+                            width: 124px;
+                        }
                     }
                 `}
             </style>
