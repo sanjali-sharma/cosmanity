@@ -1,4 +1,5 @@
 import Hero from "../components/Hero/Hero";
+import Intro from "../components/Intro/Intro";
 import Layout from "../components/Layout/Layout";
 
 export default function Home() {
@@ -6,6 +7,7 @@ export default function Home() {
         <>
             <Layout>
                 <Hero />
+                <Intro />
             </Layout>
             <style jsx>
                 {`
