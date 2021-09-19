@@ -20,4 +20,19 @@ const content = {
     ),
 };
 
-module.exports = { content };
+const videoCarousel = [
+    {
+        image: "https://picsum.photos/id/547/500",
+        video_link: "https://youtu.be/2LZ0r2VFts4",
+    },
+    {
+        image: "https://picsum.photos/id/548/500",
+        video_link: "https://youtu.be/2LZ0r2VFts4",
+    },
+    {
+        image: "https://picsum.photos/id/549/500",
+        video_link: "https://youtu.be/2LZ0r2VFts4",
+    },
+];
+
+module.exports = { content, videoCarousel };

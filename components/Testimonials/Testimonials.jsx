@@ -1,7 +1,6 @@
-import { useRef } from "react";
+import React, { useRef } from "react";
 import Slider from "react-slick";
 import Image from "next/image";
-
 import testimonialData from "./testimonialData";
 
 const settings = {
@@ -12,6 +11,30 @@ const settings = {
     slidesToScroll: 1,
     arrows: false,
     adaptiveHeight: true,
+};
+
+const VideoItem = ({ image }) => {
+    return (
+        <>
+            <div className="carousel-item">
+                <div className="carousel-image">
+                    <Image src={image} layout={"fill"} objectFit={"cover"} />
+                </div>
+            </div>
+            <style jsx>
+                {`
+                    .carousel-item {
+                        height: 500px;
+                    }
+
+                    .carousel-item .carousel-image {
+                        position: relative;
+                        height: 100%;
+                    }
+                `}
+            </style>
+        </>
+    );
 };
 
 const Testimonials = () => {
@@ -33,6 +56,10 @@ const Testimonials = () => {
         }
     };
 
+    const renderCarouselItem = (list) => {
+        return list.map(({ image, video_link }, idx) => <VideoItem image={image} key={`VID-{idx}`} />);
+    };
+
     return (
         <>
             <section className="testimonials lr-pad-d lr-pad-m tb-pad-d tb-pad-m f-d f-h-sb">
@@ -44,15 +71,7 @@ const Testimonials = () => {
                 <div className="testimonials-right f-d f-h-e">
                     <div className="video-carousel-container">
                         <Slider {...settings} className="video-carousel" ref={carouselRef}>
-                            <div className="carousel-item">
-                                <h3>1</h3>
-                            </div>
-                            <div className="carousel-item">
-                                <h3>2</h3>
-                            </div>
-                            <div className="carousel-item">
-                                <h3>3</h3>
-                            </div>
+                            {renderCarouselItem(testimonialData.videoCarousel)}
                         </Slider>
                         <div className="carousel-arrows f-d c-pointer">
                             <div className="arrow-box f-d f-h-c f-v-c" onClick={() => handleCarouselNav("prev")}>
@@ -112,11 +131,6 @@ const Testimonials = () => {
 
                     .video-carousel-container .carousel-arrows .arrow-box .arrow-next {
                         transform: rotate(180deg);
-                    }
-
-                    .carousel-item {
-                        background-color: wheat;
-                        height: 500px;
                     }
                 `}
             </style>
