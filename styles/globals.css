@@ -99,6 +99,11 @@ button {
 
 .font-suez {
     font-family: "Suez One" !important;
+    letter-spacing: 0.02em;
+}
+
+.font-wt-700 {
+    font-weight: 700;
 }
 
 /* Padding Classes */
@@ -158,6 +163,7 @@ h5 {
 .body-caption-2 {
     font-weight: 400;
     font-family: "Inter", sans-serif;
+    letter-spacing: 0.02em;
 }
 
 .body-xl {
@@ -1119,6 +1125,10 @@ h5 {
 @media only screen and (max-device-width: 760px) {
     #root {
         margin-top: 64px;
+    }
+
+    .hide-d {
+        display: block;
     }
 
     .hamburger {
