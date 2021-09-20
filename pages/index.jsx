@@ -2,6 +2,7 @@ import Hero from "../components/Hero/Hero";
 import Intro from "../components/Intro/Intro";
 import Layout from "../components/Layout/Layout";
 import Testimonials from "../components/Testimonials/Testimonials";
+import About from "../components/About/About";
 
 export default function Home() {
     return (
@@ -10,6 +11,7 @@ export default function Home() {
                 <Hero />
                 <Intro />
                 <Testimonials />
+                <About />
             </Layout>
             <style jsx>
                 {`
