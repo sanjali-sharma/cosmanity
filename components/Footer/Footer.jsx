@@ -55,16 +55,19 @@ const Footer = () => {
                 </div>
 
                 <div className="divider"></div>
+
                 <div className="footer-end f-d f-h-sb f-v-c">
                     <div className="copy-right body-regular hide-m">
                         &copy; 2021 COSMANITY NGO. All Rights Reserved.
                     </div>
-                    <div className="copy-right body-regular hide-d ">
-                        &copy; 2021 COSMANITY NGO. <br /> All Rights Reserved.
-                    </div>
-                    <div className="privacy-terms f-d">
+
+                    <div className="privacy-terms f-d f-h-sb">
                         <div className="footer-link c-pointer body-regular">Privacy Policy</div>
                         <div className="footer-link c-pointer body-regular">Terms of use</div>
+                    </div>
+
+                    <div className="copy-right body-regular hide-d  text-c-d">
+                        &copy; 2021 COSMANITY NGO. <br /> All Rights Reserved.
                     </div>
                 </div>
             </footer>
@@ -124,8 +127,8 @@ const Footer = () => {
                     }
 
                     .divider {
-                        border-top: 1px dashed #04014d;
-                        opacity: 0.5;
+                        border-top: 2px dashed var(--prussion);
+                        opacity: 0.2;
                         margin-top: 64px;
                         margin-bottom: 40px;
                     }
@@ -161,12 +164,21 @@ const Footer = () => {
                         }
 
                         .footer-end .privacy-terms {
-                            display: block;
                             margin-top: 16px;
+                            margin-bottom: 32px;
                         }
 
                         .footer-end .privacy-terms .footer-link {
                             margin-top: 8px;
+                        }
+
+                        .email-form {
+                            flex-direction: column;
+                        }
+
+                        .email-form .email-field {
+                            width: 100%;
+                            margin-bottom: 16px;
                         }
                     }
                 `}
