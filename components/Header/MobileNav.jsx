@@ -68,11 +68,16 @@ class MobileNav extends Component {
                             display: none !important;
                         }
 
+                        .arrow-right {
+                            display: none;
+                        }
+
                         @media only screen and (max-device-width: 760px) {
                             .arrow-right {
                                 position: relative;
                                 width: 24px;
                                 height: 24px;
+                                display: block;
                             }
 
                             .nav-mobile-container .get-started-btn {
