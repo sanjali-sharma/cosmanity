@@ -67,11 +67,11 @@ const TypeCard = ({ bgColor = "#ffff", title = "", image = "/images/hero-organiz
                 <div className="info text-c-d body-medium">I’m a</div>
                 <div className="title font-suez text-c-d">{title}</div>
                 <div className="type-image f-d f-h-c">
-                    <Image src={image} layout={"fill"} objectFit={"contain"} />
+                    <Image src={image} layout={"fill"} objectFit={"contain"} alt={""} />
                 </div>
                 <div className="open-url f-d f-h-c f-v-c" style={{ display: diplay }}>
                     <div className="arrow-right-icon">
-                        <Image src={"/icons/arrow-right-up.svg"} layout={"fill"} objectFit={"contain"} />
+                        <Image src={"/icons/arrow-right-up.svg"} layout={"fill"} objectFit={"contain"} alt={""} />
                     </div>
                 </div>
             </div>

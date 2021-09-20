@@ -81,12 +81,12 @@ const VideoItem = ({ image, video_link, handleSetVideo }) => {
         <>
             <div className="carousel-item">
                 <div className="carousel-image">
-                    <Image src={image} layout={"fill"} objectFit={"cover"} />
+                    <Image src={image} layout={"fill"} objectFit={"cover"} alt={""} />
                 </div>
                 <div className="play-btn-container f-d f-h-c c-pointer" onClick={() => handleSetVideo(video_link)}>
                     <div className="play-btn c-pointer  f-d f-h-c f-v-c">
                         <div className="play-icon">
-                            <Image src={"/icons/play.svg"} layout={"fill"} objectFit={"contain"} />
+                            <Image src={"/icons/play.svg"} layout={"fill"} objectFit={"contain"} alt={""} />
                         </div>
                     </div>
                 </div>
@@ -175,12 +175,22 @@ const Testimonials = () => {
                         <div className="carousel-arrows f-d c-pointer">
                             <div className="arrow-box f-d f-h-c f-v-c" onClick={() => handleCarouselNav("prev")}>
                                 <div className="arrow-icon">
-                                    <Image src={"/icons/arrow-right.svg"} layout={"fill"} objectFit={"contain"} />
+                                    <Image
+                                        src={"/icons/arrow-right.svg"}
+                                        layout={"fill"}
+                                        objectFit={"contain"}
+                                        alt={""}
+                                    />
                                 </div>
                             </div>
                             <div className="arrow-box f-d f-h-c f-v-c" onClick={() => handleCarouselNav("next")}>
                                 <div className="arrow-icon arrow-next">
-                                    <Image src={"/icons/arrow-right.svg"} layout={"fill"} objectFit={"contain"} />
+                                    <Image
+                                        src={"/icons/arrow-right.svg"}
+                                        layout={"fill"}
+                                        objectFit={"contain"}
+                                        alt={""}
+                                    />
                                 </div>
                             </div>
                         </div>
