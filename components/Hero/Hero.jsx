@@ -10,7 +10,7 @@ const Hero = () => {
                     </h1>
                     <div className="hero-mobile-image hide-d">
                         <Image
-                            src={"/images/relax-work.png"}
+                            src={"/images/relax-work.svg"}
                             alt={"Comanity-Hero-Image"}
                             layout={"fill"}
                             objectFit={"contain"}
@@ -25,7 +25,7 @@ const Hero = () => {
                 <div className="hero-right f-d f-h-e hide-m" data-aos={"fade-up"} data-aos-duration="2000">
                     <div className="hero-image">
                         <Image
-                            src={"/images/relax-work.png"}
+                            src={"/images/relax-work.svg"}
                             alt={"Comanity-Hero-Image"}
                             layout={"fill"}
                             objectFit={"contain"}

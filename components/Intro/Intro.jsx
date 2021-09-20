@@ -139,9 +139,9 @@ const Intro = () => {
                     </div>
                 </div>
                 <div className="org-types g-d g-col-3 g-gap-32">
-                    <TypeCard bgColor={"#ECDFF6"} title={"Organization"} image={"/images/hero-organization.png"} />
-                    <TypeCard bgColor={"#FFE9E3"} title={"Job Seeker"} image={"/images/in-a-reace.png"} />
-                    <TypeCard bgColor={"#C8EBFF;"} title={"Volunteer"} image={"/images/super-helper.png"} />
+                    <TypeCard bgColor={"#ECDFF6"} title={"Organization"} image={"/images/hero-organization.svg"} />
+                    <TypeCard bgColor={"#FFE9E3"} title={"Job Seeker"} image={"/images/in-a-reace.svg"} />
+                    <TypeCard bgColor={"#C8EBFF;"} title={"Volunteer"} image={"/images/super-helper.svg"} />
                 </div>
             </section>
             <style jsx>
