@@ -24,7 +24,7 @@ const SocialShare = ({ icon_name = "whatsapp" }) => {
         <>
             <div className="social-box c-pointer">
                 <div className="social-logo f-d f-h-c f-v-c">
-                    <Image src={imagePath} width={20} height={20} />
+                    <Image src={imagePath} width={20} height={20} alt={""} />
                 </div>
             </div>
             <style jsx>

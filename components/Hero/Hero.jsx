@@ -6,7 +6,7 @@ const Hero = () => {
             <section className="hero-container lr-pad-d lr-pad-m tb-pad-d tb-pad-m f-d f-h-sb f-v-c">
                 <div className="hero-left" data-aos={"fade-up"} data-aos-duration="2000">
                     <h1 className="h1-heading font-suez title">
-                        Let's get you back <br /> on your feet.
+                        {"Let's get you back"} <br /> on your feet.
                     </h1>
                     <div className="hero-mobile-image hide-d">
                         <Image
