@@ -1,6 +1,7 @@
 import { stepsData } from "./introData";
 import Image from "next/image";
 import { useState } from "react";
+import Link from "next/link";
 
 const Step = ({ step_no = 0 }) => {
     let data = stepsData[step_no];
@@ -46,7 +47,12 @@ const Step = ({ step_no = 0 }) => {
     );
 };
 
-const TypeCard = ({ bgColor = "#ffff", title = "", image = "/images/hero-organization.png" }) => {
+const TypeCard = ({
+    bgColor = "#ffff",
+    title = "",
+    image = "/images/hero-organization.png",
+    href = "/form/job-seeker",
+}) => {
     const [hoverActive, sethoverActive] = useState(false);
     let diplay = "none";
     if (hoverActive) diplay = "flex";
@@ -69,11 +75,13 @@ const TypeCard = ({ bgColor = "#ffff", title = "", image = "/images/hero-organiz
                 <div className="type-image f-d f-h-c">
                     <Image src={image} layout={"fill"} objectFit={"contain"} alt={""} />
                 </div>
-                <div className="open-url f-d f-h-c f-v-c" style={{ display: diplay }}>
-                    <div className="arrow-right-icon">
-                        <Image src={"/icons/arrow-right-up.svg"} layout={"fill"} objectFit={"contain"} alt={""} />
+                <Link href={href}>
+                    <div className="open-url f-d f-h-c f-v-c" style={{ display: diplay }}>
+                        <div className="arrow-right-icon">
+                            <Image src={"/icons/arrow-right-up.svg"} layout={"fill"} objectFit={"contain"} alt={""} />
+                        </div>
                     </div>
-                </div>
+                </Link>
             </div>
             <style jsx>
                 {`
@@ -138,10 +146,25 @@ const Intro = () => {
                         <Step step_no={2} />
                     </div>
                 </div>
-                <div className="org-types g-d g-col-3 g-gap-32">
-                    <TypeCard bgColor={"#ECDFF6"} title={"Organization"} image={"/images/hero-organization.svg"} />
-                    <TypeCard bgColor={"#FFE9E3"} title={"Job Seeker"} image={"/images/in-a-reace.svg"} />
-                    <TypeCard bgColor={"#C8EBFF;"} title={"Volunteer"} image={"/images/super-helper.svg"} />
+                <div className="org-types g-d g-col-3 g-gap-32" id={"intro-forms"}>
+                    <TypeCard
+                        bgColor={"#ECDFF6"}
+                        title={"Organization"}
+                        image={"/images/hero-organization.svg"}
+                        href={"/form/organization"}
+                    />
+                    <TypeCard
+                        bgColor={"#FFE9E3"}
+                        title={"Job Seeker"}
+                        image={"/images/in-a-reace.svg"}
+                        href={"/form/job-seeker"}
+                    />
+                    <TypeCard
+                        bgColor={"#C8EBFF;"}
+                        title={"Volunteer"}
+                        image={"/images/super-helper.svg"}
+                        href={"/form/volunteer"}
+                    />
                 </div>
             </section>
             <style jsx>
