@@ -146,7 +146,7 @@ const Intro = () => {
                         <Step step_no={2} />
                     </div>
                 </div>
-                <div className="org-types g-d g-col-3 g-gap-32">
+                <div className="org-types g-d g-col-3 g-gap-32" id={"intro-forms"}>
                     <TypeCard
                         bgColor={"#ECDFF6"}
                         title={"Organization"}

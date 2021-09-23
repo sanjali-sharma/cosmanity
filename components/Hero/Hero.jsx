@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { Link as ScrollTo } from "react-scroll";
 
 const Hero = () => {
     return (
@@ -20,7 +21,16 @@ const Hero = () => {
                         Cosmanity is a nonprofit that empowers COVID <br /> Affected Candidates to find their
                         credibility and be <br /> employable again.
                     </div>
-                    <div className="btn-p btn-x-lg get-started-btn font-suez"> Get Started</div>
+                    <ScrollTo
+                        activeClass="active"
+                        to="intro-forms"
+                        spy={true}
+                        smooth={true}
+                        offset={-70}
+                        duration={500}
+                    >
+                        <div className="btn-p btn-x-lg get-started-btn font-suez"> Get Started</div>
+                    </ScrollTo>
                 </div>
                 <div className="hero-right f-d f-h-e hide-m" data-aos={"fade-up"} data-aos-duration="2000">
                     <div className="hero-image">
