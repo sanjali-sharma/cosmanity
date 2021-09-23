@@ -14,15 +14,13 @@ const Form = () => {
                 src="https://tally.so/embed/woO71w?hideTitle=1&alignLeft=1"
                 width="100%"
                 height="800"
-                frameBorder="0"
-                marginHeight="0"
-                marginWidth="0"
-                title="Registration Form"
+                frameborder="0"
+                marginheight="0"
+                marginwidth="0"
+                title="Job Seeker"
             ></iframe>
         ),
     };
-
-    console.log("form", form);
 
     switch (form) {
         case "job-seeker":
@@ -35,10 +33,10 @@ const Form = () => {
                         src="https://tally.so/embed/woO71w?hideTitle=1&alignLeft=1"
                         width="100%"
                         height="800"
-                        frameBorder="0"
-                        marginHeight="0"
-                        marginWidth="0"
-                        title="Registration Form"
+                        frameborder="0"
+                        marginheight="0"
+                        marginwidth="0"
+                        title="Job Seeker"
                     ></iframe>
                 ),
             };
@@ -50,13 +48,13 @@ const Form = () => {
                 image: "/images/hero-organization.svg",
                 iframe: (
                     <iframe
-                        src="https://tally.so/embed/woO71w?hideTitle=1&alignLeft=1"
+                        src="https://tally.so/embed/wQ0Jg3?hideTitle=1&alignLeft=1"
                         width="100%"
-                        height="800"
-                        frameBorder="0"
-                        marginHeight="0"
-                        marginWidth="0"
-                        title="Registration Form"
+                        height="500"
+                        frameborder="0"
+                        marginheight="0"
+                        marginwidth="0"
+                        title="Organization"
                     ></iframe>
                 ),
             };
@@ -68,13 +66,13 @@ const Form = () => {
                 image: "/images/super-helper.svg",
                 iframe: (
                     <iframe
-                        src="https://tally.so/embed/woO71w?hideTitle=1&alignLeft=1"
+                        src="https://tally.so/embed/wQ0Jg3?hideTitle=1&alignLeft=1"
                         width="100%"
-                        height="800"
-                        frameBorder="0"
-                        marginHeight="0"
-                        marginWidth="0"
-                        title="Registration Form"
+                        height="500"
+                        frameborder="0"
+                        marginheight="0"
+                        marginwidth="0"
+                        title="Organization"
                     ></iframe>
                 ),
             };
