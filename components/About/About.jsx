@@ -10,7 +10,7 @@ const About = () => {
                     <h1 className="h1-heading font-suez title">{content.heading}</h1>
                     <div className="desc body-large">{content.desc}</div>
                     <div className='about-cards f-d'>
-                        {content.cards.map((x, i) => <AboutCard title={x.title} desc={x.desc} color={i === 1 ? 'yellow' : ''} />)}
+                        {content.cards.map((x, i) => <AboutCard title={x.title} key={i} desc={x.desc} color={i === 1 ? 'yellow' : ''} />)}
                     </div>
                 </div>
                 <div className='about-right'>
