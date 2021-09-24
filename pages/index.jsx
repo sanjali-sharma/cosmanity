@@ -3,8 +3,10 @@ import Intro from "../components/Intro/Intro";
 import Layout from "../components/Layout/Layout";
 import Testimonials from "../components/Testimonials/Testimonials";
 import About from "../components/About/About";
+import Team from "../components/Team/Team";
+import FAQ from "../components/FAQ/FAQ";
 
-export default function Home() {
+export default function Home({ deviceType }) {
     return (
         <>
             <Layout>
@@ -12,6 +14,8 @@ export default function Home() {
                 <Intro />
                 <Testimonials />
                 <About />
+                <Team deviceType={deviceType} />
+                <FAQ />
             </Layout>
             <style jsx>
                 {`
@@ -21,4 +25,17 @@ export default function Home() {
             </style>
         </>
     );
+}
+
+export async function getServerSideProps(context) {
+    const UA = context.req.headers['user-agent'];
+    const isMobile = Boolean(UA.match(
+        /Android|BlackBerry|iPhone|iPad|iPod|Opera Mini|IEMobile|WPDesktop/i
+    ))
+
+    return {
+        props: {
+            deviceType: isMobile ? 'mobile' : 'desktop'
+        }
+    }
 }
