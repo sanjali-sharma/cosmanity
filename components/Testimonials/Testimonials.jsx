@@ -161,7 +161,7 @@ const Testimonials = () => {
 
     return (
         <>
-            <section className="testimonials lr-pad-d lr-pad-m tb-pad-d tb-pad-m f-d f-h-sb">
+            <section className="testimonials lr-pad-d lr-pad-m tb-pad-d tb-pad-m f-d f-h-sb" id={"testimonials"}>
                 <div className="testimonials-left">
                     <h1 className="h1-heading font-suez title">{testimonialData.content.heding}</h1>
                     <div className="desc body-large">{testimonialData.content.desc_one}</div>

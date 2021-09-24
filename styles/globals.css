@@ -103,7 +103,11 @@ button {
 }
 
 .font-wt-700 {
-    font-weight: 700;
+    font-weight: 700 !important;
+}
+
+.font-wt-500 {
+    font-weight: 500 !important;
 }
 
 /* Padding Classes */

@@ -1,6 +1,7 @@
 import Image from "next/image";
+import { Link as ScrollTo } from "react-scroll";
 
-const Header = () => {
+const Header = (props) => {
     return (
         <>
             <nav className="nav-bar lr-pad-d lr-pad-m f-d f-h-sb">
@@ -8,11 +9,23 @@ const Header = () => {
                     <Image src={"/cosmanity_logo.svg"} alt="cosmanity" layout={"fill"} />
                 </div>
                 <div className="nav-links-container f-d f-h-sb f-v-c hide-m">
-                    <div className="nav-link body-regular">Testimonials</div>
+                    <ScrollTo activeClass="active" to="testimonials" spy={true} smooth={true} duration={500}>
+                        <div className="nav-link body-regular">Testimonials</div>
+                    </ScrollTo>
                     <div className="nav-link body-regular">About</div>
                     <div className="nav-link body-regular">Contact</div>
                     <div className="donate-btn f-d f-h-c f-v-c c-pointer">Donate Now</div>
                 </div>
+
+                <button
+                    className={`hamburger hamburger--slider ${props.isActive ? "is-active" : ""}`}
+                    type="button"
+                    onClick={() => props.handleMobileNav(!props.isActive)}
+                >
+                    <span className="hamburger-box">
+                        <span className="hamburger-inner"></span>
+                    </span>
+                </button>
             </nav>
             <style jsx>
                 {`
@@ -40,6 +53,7 @@ const Header = () => {
 
                     .nav-links-container .nav-link {
                         margin-right: 40px;
+                        cursor: pointer;
                     }
 
                     .nav-links-container .donate-btn {
