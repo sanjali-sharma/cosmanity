@@ -4,7 +4,7 @@ const AboutCard = ({ title, desc, color }) => {
   return (
     <>
       <div className='about-card body-large'>
-        <div className={`card-title ${color}`}>{title}</div>
+        <div className={`card-title font-suez ${color}`}>{title}</div>
         {desc}
       </div>
       <style jsx>
