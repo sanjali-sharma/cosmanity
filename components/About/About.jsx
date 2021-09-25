@@ -10,7 +10,7 @@ const About = () => {
                     <h1 className="h1-heading font-suez title">{content.heading}</h1>
                     <div className="desc body-large">{content.desc}</div>
                     <div className='about-cards f-d'>
-                        {content.cards.map((x, i) => <AboutCard title={x.title} desc={x.desc} color={i === 1 ? 'yellow' : ''} />)}
+                        {content.cards.map((x, i) => <AboutCard title={x.title} key={i} desc={x.desc} color={i === 1 ? 'yellow' : ''} />)}
                     </div>
                 </div>
                 <div className='about-right'>
@@ -29,7 +29,7 @@ const About = () => {
                     }
                     .about .about-right{
                         width:25%;
-                        margin-right: -4rem;
+                        margin-right: -6rem;
                     }
                     .about .about-right .bg-image-full{
                         width:100%;
@@ -51,6 +51,21 @@ const About = () => {
                         }
                         .about .about-left .about-cards {
                             flex-direction: column;
+                        }
+                    }
+                    @media only screen and (min-width: 1366px) and (max-width: 1440px) {
+                        .about .about-right{
+                            margin-right: -4rem;
+                        }
+                    }
+                    @media screen and (min-width: 2000px) {
+                        .about .about-right{
+                            margin-right: -40rem;
+                        }
+                    }
+                    @media screen and (min-width: 768px) and (max-width: 1024px) {
+                        .about .about-right{
+                            margin-right: -2rem;
                         }
                     }
             `}

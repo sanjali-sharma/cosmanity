@@ -9,7 +9,7 @@ const Team = ({ deviceType }) => {
         dots: false,
         infinite: true,
         speed: 500,
-        slidesToShow: deviceType === 'mobile' ? 1.1 : 3.1,
+        slidesToShow: deviceType === 'mobile' ? 1.12 : 3.1,
         slidesToScroll: 1,
         arrows: false,
         adaptiveHeight: true,
@@ -67,7 +67,7 @@ const Team = ({ deviceType }) => {
                         </div>
                     </div>
                 </div>
-                <Slider {...settings} className="video-carousel" ref={carouselRef}>
+                <Slider style={{ marginRight: '-64px' }} {...settings} className="video-carousel" ref={carouselRef}>
                     {renderCarouselItem(content.videoCarousel)}
                 </Slider>
             </div>

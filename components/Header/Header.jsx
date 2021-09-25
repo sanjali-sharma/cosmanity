@@ -12,8 +12,12 @@ const Header = (props) => {
                     <ScrollTo activeClass="active" to="testimonials" spy={true} smooth={true} duration={500}>
                         <div className="nav-link body-regular">Testimonials</div>
                     </ScrollTo>
-                    <div className="nav-link body-regular">About</div>
-                    <div className="nav-link body-regular">Contact</div>
+                    <ScrollTo activeClass="active" to="about" spy={true} smooth={true} duration={500}>
+                        <div className="nav-link body-regular">About</div>
+                    </ScrollTo>
+                    <ScrollTo activeClass="active" to="footer" spy={true} smooth={true} duration={500}>
+                        <div className="nav-link body-regular">Contact</div>
+                    </ScrollTo>
                     <div className="donate-btn f-d f-h-c f-v-c c-pointer">Donate Now</div>
                 </div>
 
