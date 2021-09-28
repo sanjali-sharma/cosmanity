@@ -1,18 +1,19 @@
 import React, { Component } from "react";
 import Image from "next/image";
+import { Link as ScrollTo } from "react-scroll";
 
 const MobileNavList = [
     {
         name: "Testimonials",
-        hash: "",
+        hash: "testimonials",
     },
     {
         name: "About Us",
-        hash: "",
+        hash: "about",
     },
     {
         name: "Contact",
-        hash: "",
+        hash: "footer",
     },
 ];
 
@@ -36,15 +37,17 @@ class MobileNav extends Component {
     renderMobileItems = () => {
         return MobileNavList.map(({ name, hash }, idx) => {
             return (
-                <div className="mob-menu-tab" key={idx}>
-                    <div className="menu-item f-d f-h-sb f-v-c">
-                        <div className="body-large font-wt-500">{name}</div>
-                        <div className="arrow-right">
-                            <Image src={"/chevron-right.svg"} layout={"fill"} objectFit={"contain"} />
+                <ScrollTo activeClass="active" to={hash} spy={true} smooth={true} duration={500} key={idx}>
+                    <div className="mob-menu-tab" onClick={() => this.props.handleMobileNav(!this.props.isClicked)}>
+                        <div className="menu-item f-d f-h-sb f-v-c">
+                            <div className="body-large font-wt-500">{name}</div>
+                            <div className="arrow-right">
+                                <Image src={"/chevron-right.svg"} layout={"fill"} objectFit={"contain"} />
+                            </div>
                         </div>
+                        <div className="divider"></div>
                     </div>
-                    <div className="divider"></div>
-                </div>
+                </ScrollTo>
             );
         });
     };
@@ -59,7 +62,14 @@ class MobileNav extends Component {
                 >
                     <div className="mob-menu-items">{this.renderMobileItems()}</div>
 
-                    <div className="btn-p btn-x-lg font-suez get-started-btn">Get Started</div>
+                    <ScrollTo activeClass="active" to="intro-forms" spy={true} smooth={true} duration={500}>
+                        <div
+                            className="btn-p btn-x-lg font-suez get-started-btn"
+                            onClick={() => this.props.handleMobileNav(!this.props.isClicked)}
+                        >
+                            Get Started
+                        </div>
+                    </ScrollTo>
                 </div>
 
                 <style>
