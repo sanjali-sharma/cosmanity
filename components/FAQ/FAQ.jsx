@@ -3,7 +3,6 @@ import { content } from "./FAQData";
 import ReactHtmlParser from "react-html-parser";
 import Image from "next/image";
 
-
 const FAQ = () => {
     const [activeQuestions, setActiveQuestions] = useState([]);
     const handleActiveQuestion = (questionIndex) => {
@@ -45,18 +44,18 @@ const FAQ = () => {
                     </div>
                     <style jsx>
                         {`
-                        .question-wrapper {
-                            grid-template-columns: 8fr 1fr;
-                        }
-                        .faq-data{
-                            background: white;
-                            padding: 2rem;
-                            margin-bottom:32px;
-                        }
-                        .question-wrapper .question{
-                            margin-bottom:24px;
-                            font-weight:700;
-                        }
+                            .question-wrapper {
+                                grid-template-columns: 8fr 1fr;
+                            }
+                            .faq-data {
+                                background: white;
+                                padding: 2rem;
+                                margin-bottom: 32px;
+                            }
+                            .question-wrapper .question {
+                                margin-bottom: 24px;
+                                font-weight: 700;
+                            }
                         `}
                     </style>
                 </>
@@ -67,15 +66,18 @@ const FAQ = () => {
         <>
             <div className="faq lr-pad-d lr-pad-m tb-pad-d tb-pad-m ">
                 <h1 className="h1-heading font-suez title">{content.heading}</h1>
-                <div className='body-large desc'>{content.desc}</div>
-                <div className='faq-content f-d'>
-                    <div className='faq-left f-d'>
-                        <div className="faq-img bg-image-full" style={{
-                            backgroundImage: `url("/images/faq.svg")`
-                        }} />
+                <div className="body-large desc">{content.desc}</div>
+                <div className="faq-content f-d">
+                    <div className="faq-left f-d">
+                        <div
+                            className="faq-img bg-image-full"
+                            style={{
+                                backgroundImage: `url("/images/faq.svg")`,
+                            }}
+                        />
                     </div>
-                    <div className='faq-right'>
-                        <div className="faq-container f-d  f-vt lr-pad-d lr-pad-m">
+                    <div className="faq-right">
+                        <div className="faq-container f-d  f-vt">
                             <div className="faq-q"> {renderQuestions(content.faq)}</div>
                         </div>
                     </div>
@@ -83,48 +85,46 @@ const FAQ = () => {
             </div>
             <style jsx>
                 {`
-                .faq{
-                    background: linear-gradient(180deg, #FFEDEA 0%, rgba(255, 237, 234, 0) 100%);
-                }
-                .faq .desc{
-                    margin-top:24px;
-                    width:60%;
-                }
-                .faq .faq-left{
-                    width:30%
-                }
-                .faq .faq-left .faq-img{
-                    width: 240px;
-                    height: 200px;
-                    // background-position: bottom;
-                    margin: auto;
-                    margin-bottom: 3rem;
-                }
-                .faq .faq-right{
-                    width:70%;
-                    margin-top:80px;
-                }
-                @media only screen and (max-device-width: 760px) {
-                    .faq .desc{
-                        width:unset;
+                    .faq {
+                        background: linear-gradient(180deg, #ffedea 0%, rgba(255, 237, 234, 0) 100%);
                     }
-                    .faq .faq-left{
-                        width:0%
+                    .faq .desc {
+                        margin-top: 24px;
+                        width: 60%;
                     }
-                    .faq .faq-right{
-                        width:100%
+                    .faq .faq-left {
+                        width: 30%;
                     }
-                    .faq-container{
-                        padding-left:0;
-                        padding-right:0;
+                    .faq .faq-left .faq-img {
+                        width: 240px;
+                        height: 200px;
+                        // background-position: bottom;
+                        margin: auto;
+                        margin-bottom: 3rem;
                     }
-                }
-
+                    .faq .faq-right {
+                        width: 70%;
+                        margin-top: 80px;
+                    }
+                    @media only screen and (max-device-width: 760px) {
+                        .faq .desc {
+                            width: unset;
+                        }
+                        .faq .faq-left {
+                            width: 0%;
+                        }
+                        .faq .faq-right {
+                            width: 100%;
+                        }
+                        .faq-container {
+                            padding-left: 0;
+                            padding-right: 0;
+                        }
+                    }
                 `}
             </style>
         </>
-    )
+    );
+};
 
-}
-
-export default FAQ
+export default FAQ;
