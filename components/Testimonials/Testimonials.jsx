@@ -32,6 +32,11 @@ const VideoModal = ({ video_link, modalOpen, setmodalOpen }) => {
         },
     };
 
+    let player_styles = {
+        width: "87vw",
+        height: "80vh",
+    };
+
     return (
         <>
             <Modal isOpen={modalOpen} onRequestClose={() => setmodalOpen(false)} style={customStyles}>
@@ -39,6 +44,8 @@ const VideoModal = ({ video_link, modalOpen, setmodalOpen }) => {
                     <ReactPlayer
                         className="intro-video-player"
                         url={video_link}
+                        width={player_styles.width}
+                        height={player_styles.height}
                         playing
                         controls
                         config={{
@@ -64,10 +71,9 @@ const VideoModal = ({ video_link, modalOpen, setmodalOpen }) => {
                         position: absolute;
                         width: 80px;
                         height: 80px;
-                        background-color: rgba(0, 0, 0, 0.5);
-                        border-radius: 50%;
-                        top: -16px;
-                        right: -16px;
+                        background-color: var(--prussion);
+                        top: 64px;
+                        right: 64px;
                         z-index: 10;
                     }
                 `}
