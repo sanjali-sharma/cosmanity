@@ -57,7 +57,11 @@ const VideoModal = ({ video_link, modalOpen, setmodalOpen }) => {
                             },
                         }}
                     />
-                    <div className="close-btn c-pointer" onClick={() => setmodalOpen(false)}></div>
+                    <div className="close-btn c-pointer f-d f-h-c f-v-c" onClick={() => setmodalOpen(false)}>
+                        <div className="cross-icon f-d f-h-c f-v-c">
+                            <Image src={"/icons/cross.svg"} objectFit={"contain"} alt={""} width={30} height={30} />
+                        </div>
+                    </div>
                 </div>
             </Modal>
             <style jsx>
@@ -65,6 +69,12 @@ const VideoModal = ({ video_link, modalOpen, setmodalOpen }) => {
                     .video-play-container {
                         padding: 64px;
                         position: relative;
+                    }
+
+                    .cross-icon {
+                        width: 18px;
+                        height: 18px;
+                        postion: relative;
                     }
 
                     .close-btn {
