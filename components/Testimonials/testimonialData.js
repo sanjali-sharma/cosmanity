@@ -45,6 +45,10 @@ const videoCarousel = [
         image: "https://i3.ytimg.com/vi/o3tJ-8bc168/hqdefault.jpg",
         video_link: "https://youtu.be/o3tJ-8bc168",
     },
+    {
+        image: "https://i3.ytimg.com/vi/ZULMwr0nask/hqdefault.jpg",
+        video_link: "https://youtu.be/ZULMwr0nask",
+    },
 ];
 
 module.exports = { content, videoCarousel };
