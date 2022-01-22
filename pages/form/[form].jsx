@@ -1,3 +1,4 @@
+import Head from "next/head";
 import { useRouter } from "next/router";
 import Image from "next/image";
 
@@ -83,6 +84,10 @@ const Form = () => {
 
     return (
         <>
+            <Head>
+                <title>Cosmanity</title>
+                <meta property="og:title" content="Cosmanity" key="title" />
+            </Head>
             <header className="page-header lr-pad-d lr-pad-m bg-image-full">
                 <div className="logo">
                     <Image src={"/cosmanity_logo.svg"} alt="cosmanity" layout={"fill"} objectFit={"contain"} />
