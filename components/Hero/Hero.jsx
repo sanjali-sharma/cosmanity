@@ -18,8 +18,8 @@ const Hero = () => {
                         />
                     </div>
                     <div className="body-large hero-desc">
-                        Cosmanity is a nonprofit that empowers COVID <br /> Affected Candidates to find their
-                        credibility and be <br /> employable again.
+                        Cosmanity is a nonprofit that empowers COVID affected candidates to find their credibility and
+                        be employable again.
                     </div>
                     <ScrollTo
                         activeClass="active"
@@ -74,10 +74,20 @@ const Hero = () => {
                         position: relative;
                     }
 
+                    .hero-left .title {
+                        font-size: 64px;
+                        line-height: 70.4px;
+                    }
+
                     @media only screen and (max-device-width: 760px) {
                         .hero-container .hero-left,
                         .hero-container .hero-right {
                             width: 100%;
+                        }
+
+                        .hero-left .title {
+                            font-size: 48px;
+                            line-height: 70.4px;
                         }
 
                         .hero-mobile-image {

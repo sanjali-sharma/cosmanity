@@ -2,23 +2,19 @@ export const content = {
     heading: <>Who we are?</>,
     desc: (
         <>
-            <span className="font-wt-700"> Cosmanity </span> is a nonprofit organization with a mission to help people
-            who are unemployed due to COVID. The organization was founded in 2020 by team of young and enthusiastic
-            memebers.
-            <br />
-            <br />
-            Cosmanity helps people who lost their job due to COVID find a new job and we’ll act as bridge between
-            employer and job seekers.
+            Cosmanity is a non-profit organisation to become a bridge between individuals who have lost their jobs
+            during COVID-19 and organisations that need employees. Started by the youth, we strive to give people
+            another chance at life when all seems in despair
         </>
     ),
-    cards:[
+    cards: [
         {
-            title:"Vision",
-            desc:"Is to help unemployed find their Credibility and Be Employable Again"
+            title: "Vision",
+            desc: "Restoring lives and aiding people in crisis. ",
         },
         {
-            title:"Mission",
-            desc:"Is to provide opportunities to unemployed and connect them to employers"
-        }
-    ]
+            title: "Mission",
+            desc: "To connect employers and employees in need",
+        },
+    ],
 };
