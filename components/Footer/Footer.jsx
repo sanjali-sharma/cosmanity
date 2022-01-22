@@ -22,7 +22,7 @@ const Footer = () => {
                     <div className="contact-us">
                         <div className="title body-medium">Contact</div>
                         <div className="info f-d f-vt">
-                            <a href="tel:+919658245122" className="detail font-suez body-big">+91 9658245122</a>
+                            <a href="tel:+918700200687" className="detail font-suez body-big">+91 8700200687</a>
                             <a href="mailto:info@cosmanity.com" className="detail font-suez body-big">info@cosmanity.com</a>
                         </div>
                     </div>
