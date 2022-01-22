@@ -1,3 +1,4 @@
+import Head from "next/head";
 import Hero from "../components/Hero/Hero";
 import Intro from "../components/Intro/Intro";
 import Layout from "../components/Layout/Layout";
@@ -10,6 +11,10 @@ import Volunteer from "../components/Volunteer/Volunteer";
 export default function Home({ deviceType }) {
     return (
         <>
+            <Head>
+                <title>Cosmanity</title>
+                <meta property="og:title" content="Cosmanity" key="title" />
+            </Head>
             <Layout>
                 <Hero />
                 <Intro />
