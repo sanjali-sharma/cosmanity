@@ -1128,7 +1128,7 @@ h5 {
 
 @media only screen and (max-device-width: 760px) {
     #root {
-        margin-top: 64px;
+        margin-top: unset;
     }
 
     .hide-d {

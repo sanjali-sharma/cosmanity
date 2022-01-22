@@ -18,7 +18,7 @@ const Header = (props) => {
                     <ScrollTo activeClass="active" to="footer" spy={true} smooth={true} duration={500}>
                         <div className="nav-link body-regular">Contact</div>
                     </ScrollTo>
-                    <div className="donate-btn f-d f-h-c f-v-c c-pointer">Donate Now</div>
+                    <div className="donate-btn f-d f-h-c f-v-c c-pointer hide-d hide-m">Donate Now</div>
                 </div>
 
                 <button
