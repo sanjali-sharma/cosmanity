@@ -21,9 +21,9 @@ const Footer = () => {
                     {/* company-info div ends */}
                     <div className="contact-us">
                         <div className="title body-medium">Contact</div>
-                        <div className="info">
-                            <div className="detail font-suez body-big">+91 9658245122</div>
-                            <div className="detail font-suez body-big">info@cosmanity.com</div>
+                        <div className="info f-d f-vt">
+                            <a href="tel:+919658245122" className="detail font-suez body-big">+91 9658245122</a>
+                            <a href="mailto:info@cosmanity.com" className="detail font-suez body-big">info@cosmanity.com</a>
                         </div>
                     </div>
                     {/* contact us div ends */}
@@ -88,13 +88,17 @@ const Footer = () => {
                         margin-top: 24px;
                     }
 
+                    .footer .contact-us .info {
+                        gap: 1rem;
+                    }
+
+                    .footer .contact-us a {
+                        font-size: 28px;
+                    }
+
                     .footer .contact-us .title,
                     .footer .follow-us .title {
                         font-weight: 700;
-                    }
-
-                    .footer .contact-us .info .detail {
-                        margin-top: 24px;
                     }
 
                     .footer .follow-us .join-news-title {
