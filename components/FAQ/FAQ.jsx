@@ -51,10 +51,13 @@ const FAQ = () => {
                                 background: white;
                                 padding: 2rem;
                                 margin-bottom: 32px;
+                                border: 1px solid #EFF0F6;
                             }
                             .question-wrapper .question {
-                                margin-bottom: 24px;
                                 font-weight: 700;
+                            }
+                            .answer-wrapper {
+                                margin-top: 1rem;
                             }
                         `}
                     </style>

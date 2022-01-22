@@ -30,12 +30,10 @@ const Footer = () => {
                     <div className="follow-us">
                         <div className="title body-medium">Follow Us</div>
                         <div className="social-container f-d ">
-                            <SocialShare icon_name={"whatsapp"} />
-                            <SocialShare icon_name={"twitter"} />
-                            <SocialShare icon_name={"linkedin"} />
-                            <SocialShare icon_name={"fb"} />
+                            <SocialShare icon_name={"instagram"} url={"https://www.instagram.com/cosmanity/"} />
+                            <SocialShare icon_name={"twitter"} url={"https://mobile.twitter.com/@cosmanity"} />
                         </div>
-                        <div className="title body-medium join-news-title">Join Newsletter</div>
+                        {/* <div className="title body-medium join-news-title">Join Newsletter</div>
                         <div className="f-d f-h-sb email-form">
                             <div className="email-field">
                                 <input
@@ -49,7 +47,7 @@ const Footer = () => {
                                 />
                             </div>
                             <button className="btn-p font-suez send-btn">Send</button>
-                        </div>
+                        </div> */}
                     </div>
                     {/* Follow us div end */}
                 </div>

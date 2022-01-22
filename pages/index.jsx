@@ -5,6 +5,7 @@ import Testimonials from "../components/Testimonials/Testimonials";
 import About from "../components/About/About";
 import Team from "../components/Team/Team";
 import FAQ from "../components/FAQ/FAQ";
+import Volunteer from "../components/Volunteer/Volunteer";
 
 export default function Home({ deviceType }) {
     return (
@@ -16,6 +17,7 @@ export default function Home({ deviceType }) {
                 <About />
                 <Team deviceType={deviceType} />
                 <FAQ />
+                <Volunteer />
             </Layout>
             <style jsx>
                 {`

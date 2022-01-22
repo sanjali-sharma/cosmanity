@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-const SocialShare = ({ icon_name = "whatsapp" }) => {
+const SocialShare = ({ icon_name = "whatsapp", url }) => {
     let imagePath = "";
 
     switch (icon_name) {
@@ -16,6 +16,9 @@ const SocialShare = ({ icon_name = "whatsapp" }) => {
         case "linkedin":
             imagePath = "/social-icons/linkedin.svg";
             break;
+        case "instagram":
+            imagePath = "/social-icons/instagram.svg";
+            break;
         default:
             imagePath = "/social-icons/whatsapp.svg";
     }
@@ -23,9 +26,9 @@ const SocialShare = ({ icon_name = "whatsapp" }) => {
     return (
         <>
             <div className="social-box c-pointer">
-                <div className="social-logo f-d f-h-c f-v-c">
+                <a className="social-logo f-d f-h-c f-v-c" href={url}>
                     <Image src={imagePath} width={20} height={20} alt={""} />
-                </div>
+                </a>
             </div>
             <style jsx>
                 {`

@@ -2,34 +2,22 @@ export const content = {
     heading: <> Our Team </>,
     videoCarousel: [
         {
-            image: "https://picsum.photos/id/547/500",
-            designation: "Founder",
-            name: "Melany Carter",
+            image: "/images/sanjali.jpg",
+            designation: "Founder President ",
+            name: "Sanjali Sharma",
+            social: {
+                instagram: "https://www.instagram.com/sanjalisharma_/",
+                linkedin: "https://www.linkedin.com/in/sanjali-sharma-0b5685202"
+            },
         },
         {
-            image: "https://picsum.photos/id/548/500",
-            designation: "Director",
-            name: "Conrad Crist",
-        },
-        {
-            image: "https://picsum.photos/id/549/500",
-            designation: "Advisor",
-            name: "Tracy Kemmer",
-        },
-        {
-            image: "https://picsum.photos/id/547/500",
-            designation: "Founder",
-            name: "HMC",
-        },
-        {
-            image: "https://picsum.photos/id/548/500",
-            designation: "Director",
-            name: "VMD",
-        },
-        {
-            image: "https://picsum.photos/id/549/500",
-            designation: "Advisor",
-            name: "RG",
+            image: "/images/myshaa.jpg",
+            designation: "Vice President",
+            name: "Syeda Mysha Urooj",
+            social: {
+                instagram: "https://www.instagram.com/_myshaurooj_/",
+                linkedin: "https://www.linkedin.com/in/syeda-mysha-urooj-73969421a"
+            },
         },
     ],
 };

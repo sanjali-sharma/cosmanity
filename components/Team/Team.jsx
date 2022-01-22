@@ -31,9 +31,9 @@ const Team = ({ deviceType }) => {
         }
     };
     const renderCarouselItem = (list) => {
-        return list.map(({ image, name, designation }, idx) => {
+        return list.map(({ image, name, designation, social }, idx) => {
             return (
-                <TeamCard image={image} name={name} designation={designation} deviceType={deviceType} key={`VID-${idx}`} />
+                <TeamCard image={image} name={name} designation={designation} deviceType={deviceType} key={`VID-${idx}`} social={social} />
             )
         }
         );
@@ -42,9 +42,9 @@ const Team = ({ deviceType }) => {
     return (
         <>
             <div className="team lr-pad-d lr-pad-m tb-pad-d tb-pad-m ">
-                <div className='f-d'>
+                <div className='f-d f-h-s'>
                     <h1 className="h1-heading font-suez title">{content.heading}</h1>
-                    <div className="carousel-arrows f-d c-pointer">
+                    {/* <div className="carousel-arrows f-d c-pointer">
                         <div className="arrow-box f-d f-h-c f-v-c" onClick={() => handleCarouselNav("prev")}>
                             <div className="arrow-icon">
                                 <Image
@@ -65,16 +65,19 @@ const Team = ({ deviceType }) => {
                                 />
                             </div>
                         </div>
-                    </div>
+                    </div> */}
                 </div>
-                <Slider style={{ marginRight: '-64px' }} {...settings} className="video-carousel" ref={carouselRef}>
+                {/* <Slider style={{ marginRight: '-64px' }} {...settings} className="video-carousel" ref={carouselRef}> */}
+                <div className="members-container f-d">
                     {renderCarouselItem(content.videoCarousel)}
-                </Slider>
+                </div>
+                {/* </Slider> */}
             </div>
             <style jsx>
                 {`
                     .team {
                         background: linear-gradient(180deg, var(--seashell)  50%, var(--dove) 50%);
+                        margin-bottom: 4rem;
                     }
                     .team .title{
                         margin-bottom:64px;
@@ -96,6 +99,10 @@ const Team = ({ deviceType }) => {
 
                     .team .carousel-arrows .arrow-box .arrow-next {
                         transform: rotate(180deg);
+                    }
+
+                    .members-container {
+                        gap: 2rem;
                     }
                 `}
             </style>
