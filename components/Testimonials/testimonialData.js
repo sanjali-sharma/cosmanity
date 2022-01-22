@@ -26,12 +26,12 @@ const videoCarousel = [
         video_link: "https://youtu.be/lsyYTdsBAmc",
     },
     {
-        image: "https://i3.ytimg.com/vi/lsyYTdsBAmc/hqdefault.jpg",
-        video_link: "https://youtu.be/lsyYTdsBAmc",
+        image: "https://i3.ytimg.com/vi/X2mq-JvytRM/hqdefault.jpg",
+        video_link: "https://youtu.be/X2mq-JvytRM",
     },
     {
-        image: "https://i3.ytimg.com/vi/lsyYTdsBAmc/hqdefault.jpg",
-        video_link: "https://youtu.be/lsyYTdsBAmc",
+        image: "http://i3.ytimg.com/vi/KgcxK4jnbVg/hqdefault.jpg",
+        video_link: "https://youtu.be/KgcxK4jnbVg",
     },
     {
         image: "https://i3.ytimg.com/vi/cNnkiyXca3o/hqdefault.jpg",

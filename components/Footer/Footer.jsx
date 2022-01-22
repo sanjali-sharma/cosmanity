@@ -35,8 +35,8 @@ const Footer = () => {
                             <SocialShare icon_name={"linkedin"} />
                             <SocialShare icon_name={"fb"} />
                         </div>
-                        <div className="title body-medium join-news-title">Join Newsletter</div>
-                        <div className="f-d f-h-sb email-form">
+                        <div className="title body-medium join-news-title hide-d hide-m">Join Newsletter</div>
+                        <div className="f-d f-h-sb email-form hide-d hide-m">
                             <div className="email-field">
                                 <input
                                     type="text"
