@@ -1,6 +1,7 @@
 import Head from "next/head";
 import { useRouter } from "next/router";
 import Image from "next/image";
+import Link from "next/link";
 
 const Form = () => {
     const router = useRouter();
@@ -12,7 +13,7 @@ const Form = () => {
         image: "/images/in-a-reace.svg",
         iframe: (
             <iframe
-                src="https://tally.so/embed/woO71w?hideTitle=1&alignLeft=1"
+                src="https://tally.so/embed/mVqajn?hideTitle=1&alignLeft=1"
                 width="100%"
                 height="800"
                 frameBorder="0"
@@ -31,7 +32,7 @@ const Form = () => {
                 image: "/images/in-a-reace.svg",
                 iframe: (
                     <iframe
-                        src="https://tally.so/embed/woO71w?hideTitle=1&alignLeft=1"
+                        src="https://tally.so/embed/mVqajn?hideTitle=1&alignLeft=1"
                         width="100%"
                         height="800"
                         frameBorder="0"
@@ -49,7 +50,7 @@ const Form = () => {
                 image: "/images/hero-organization.svg",
                 iframe: (
                     <iframe
-                        src="https://tally.so/embed/wQ0Jg3?hideTitle=1&alignLeft=1"
+                        src="https://tally.so/embed/nP4N1n?hideTitle=1&alignLeft=1"
                         width="100%"
                         height="500"
                         frameBorder="0"
@@ -67,13 +68,13 @@ const Form = () => {
                 image: "/images/super-helper.svg",
                 iframe: (
                     <iframe
-                        src="https://tally.so/embed/wQ0Jg3?hideTitle=1&alignLeft=1"
+                        src="https://tally.so/embed/3EAGl3?hideTitle=1&alignLeft=1"
                         width="100%"
                         height="500"
                         frameBorder="0"
                         marginHeight="0"
                         marginWidth="0"
-                        title="Organization"
+                        title="Volunteer"
                     ></iframe>
                 ),
             };
@@ -89,8 +90,10 @@ const Form = () => {
                 <meta property="og:title" content="Cosmanity" key="title" />
             </Head>
             <header className="page-header lr-pad-d lr-pad-m bg-image-full">
-                <div className="logo">
-                    <Image src={"/cosmanity_logo.svg"} alt="cosmanity" layout={"fill"} objectFit={"contain"} />
+                <div className="brand-logo">
+                    <Link href={"/"} passHref>
+                        <Image src={"/cosmanity_logo.svg"} alt="cosmanity" layout={"fill"} objectFit={"contain"} />
+                    </Link>
                 </div>
                 <div className="desc">
                     <h1 className="h1-heading title font-suez">Register as {formData.name}</h1>
@@ -131,10 +134,11 @@ const Form = () => {
                         height: inherit;
                     }
 
-                    .page-header .logo {
+                    .page-header .brand-logo {
                         position: relative;
                         height: 24px;
                         width: 200px;
+                        cursor: pointer;
                     }
 
                     .desc {
